@@ -1,0 +1,121 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Contact Card */
+.contact-card {
+    background: #fff;
+    padding: 50px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    text-align: center;
+    width: 350px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+/* Profile Picture Container */
+.profile-pic-container {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    padding: 4px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Name & Title */
+h1 {
+    color: #333;
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.title {
+    color: #777;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+/* Info Section */
+.info p {
+    color: #444;
+    font-size: 16px;
+    margin: 12px 0;
+    transition: color 0.3s;
+}
+
+.info p i {
+    color: #2575fc;
+    margin-right: 10px;
+}
+
+.info p:hover {
+    color: #6a11cb;
+}
+
+/* Social Links */
+.social-links {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+    color: #2575fc;
+    text-decoration: none;
+    padding: 12px 15px;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.social-links a i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.social-links a:hover {
+    background: #2575fc;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* Responsive */
+@media screen and (max-width: 400px) {
+    .contact-card {
+        width: 90%;
+        padding: 40px 20px;
+    }
+}

@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <met#aeb3b8et="utf-8">
+        <title>DarkCV - Bootstrap CV Resume Template</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free Website Template" name="keywords">
+        <meta content="Free Website Template" name="description">
+
+        
+        <link href="img/favicon.ico" rel="icon">
+
+       
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+        
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+       
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        
+        <link href="css/style.css" rel="stylesheet">
+        
+        <!-- Modern UI/UX Design Styles -->
+        <style>
+            /* Gradient Background */
+            body {
+                background: linear-gradient(135deg, #1e3c72 0%, #2a5298 25%, #7e8ba3 50%, #b8c5d1 100%);
+                background-size: 400% 400%;
+                animation: gradientFlow 15s ease infinite;
+                min-height: 100vh;
+                position: relative;
+            }
+            
+            body::before {
+                content: '';
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
+                            radial-gradient(circle at 80% 80%, rgba(118, 75, 162, 0.1) 0%, transparent 50%);
+                z-index: -1;
+                pointer-events: none;
+            }
+            
+            @keyframes gradientFlow {
+                0% { background-position: 0% 50%; }
+                50% { background-position: 100% 50%; }
+                100% { background-position: 0% 50%; }
+            }
+            
+            /* Glassmorphism for Sidebar */
+            .sticky-lg-top > div {
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(15px);
+                border-radius: 25px;
+                box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+                border: 1px solid rgba(255, 255, 255, 0.5);
+            }
+            
+            /* Profile Image Enhancement */
+            img {
+                transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                border-radius: 50%;
+            }
+            
+            img:hover {
+                transform: scale(1.08) rotate(5deg);
+                box-shadow: 0 20px 50px rgba(30, 60, 114, 0.6);
+            }
+            
+            /* Enhanced Buttons */
+            .btn {
+                border-radius: 50px !important;
+                padding: 12px 25px;
+                font-weight: 600;
+                transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            }
+            
+            .btn:hover {
+                transform: translateY(-4px) scale(1.05);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+            }
+            
+            .btn-primary {
+                background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+                color: white !important;
+            }
+            
+            .btn-secondary {
+                background: linear-gradient(135deg, #2a5298 0%, #7e8ba3 100%);
+                color: white !important;
+            }
+            
+            /* Social Media Buttons */
+            .btn-square {
+                border-radius: 15px !important;
+                transition: all 0.4s;
+            }
+            
+            .btn-square:hover {
+                transform: translateY(-5px) rotate(10deg);
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            }
+            
+            /* Service Items */
+            .service-item {
+                background: white;
+                border-radius: 20px;
+                transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+                overflow: hidden;
+                position: relative;
+            }
+            
+            .service-item::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.2), transparent);
+                transition: left 0.6s;
+            }
+            
+            .service-item:hover::before {
+                left: 100%;
+            }
+            
+            .service-item:hover {
+                transform: translateY(-12px) scale(1.03);
+                box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+            }
+            
+            .service-item i {
+                color: #1e3c72;
+                transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            }
+            
+            .service-item:hover i {
+                transform: scale(1.3) rotate(360deg);
+                color: #2a5298;
+            }
+            
+            /* Section Styling */
+            section {
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(20px);
+                border-radius: 25px;
+                padding: 50px !important;
+                margin-bottom: 40px;
+                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+                transition: all 0.4s ease;
+                border: 1px solid rgba(255, 255, 255, 0.9);
+            }
+            
+            section:hover {
+                box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+                transform: translateY(-8px);
+            }
+            
+            /* Title Styling */
+            .title {
+                background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e8ba3 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                font-size: 3.5rem;
+                font-weight: 800;
+                position: relative;
+                display: inline-block;
+            }
+            
+            .title::after {
+                content: '';
+                position: absolute;
+                bottom: 15px;
+                left: 0;
+                width: 60%;
+                height: 5px;
+                background: linear-gradient(90deg, #667eea, #764ba2, transparent);
+                border-radius: 3px;
+                animation: underline 1.5s ease;
+            }
+            
+            /* Progress Bars */
+            .progress {
+                height: 15px;
+                border-radius: 12px;
+                background: linear-gradient(90deg, #e0e0e0, #f5f5f5);
+                overflow: hidden;
+                box-shadow: inset 0 3px 8px rgba(0,0,0,0.1);
+            }
+            
+            .progress-bar {
+                border-radius: 12px;
+                background: linear-gradient(90deg, #1e3c72 0%, #2a5298 50%, #7e8ba3 100%);
+                background-size: 200% 100%;
+                animation: slideIn 2s ease, gradientShift 3s ease infinite;
+                box-shadow: 0 4px 15px rgba(30, 60, 114, 0.6);
+            }
+            
+            @keyframes slideIn {
+                from { width: 0%; }
+            }
+            
+            @keyframes gradientShift {
+                0%, 100% { background-position: 0% 50%; }
+                50% { background-position: 100% 50%; }
+            }
+            
+            /* Stats Cards */
+            .bg-secondary {
+                background: linear-gradient(135deg, #2a5298 0%, #7e8ba3 100%) !important;
+                border-radius: 25px;
+                transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                color: white !important;
+                border: 2px solid rgba(255, 255, 255, 0.3);
+            }
+            
+            .bg-secondary:hover {
+                transform: scale(1.08) translateY(-8px) rotate(2deg);
+                box-shadow: 0 20px 50px rgba(42, 82, 152, 0.5);
+            }
+            
+            /* Typography */
+            p {
+                line-height: 1.9;
+                color: #2c3e50;
+            }
+            
+            /* Text colors for better readability */
+            .text-light {
+                color: #34495e !important;
+            }
+            
+            h1, h2, h3, h4, h5, h6 {
+                color: #1e3c72;
+            }
+            
+            /* Badges */
+            .badge {
+                padding: 10px 20px;
+                border-radius: 25px;
+                font-weight: 600;
+                transition: all 0.4s ease;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            .badge:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            }
+            
+            /* AI Chat Button */
+            #chatToggle {
+                background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%) !important;
+                box-shadow: 0 10px 30px rgba(30, 60, 114, 0.5) !important;
+            }
+            
+            #chatToggle:hover {
+                background: linear-gradient(135deg, #2a5298 0%, #7e8ba3 100%) !important;
+                box-shadow: 0 15px 40px rgba(30, 60, 114, 0.7) !important;
+            }
+            
+            /* Images in sections */
+            section img {
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            }
+            
+            section img:hover {
+                transform: scale(1.08);
+                box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            }
+            
+            /* Custom Scrollbar */
+            ::-webkit-scrollbar {
+                width: 14px;
+            }
+            
+            ::-webkit-scrollbar-track {
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 10px;
+            }
+            
+            ::-webkit-scrollbar-thumb {
+                background: linear-gradient(135deg, #1e3c72, #2a5298);
+                border-radius: 10px;
+                border: 2px solid transparent;
+                background-clip: padding-box;
+            }
+            
+            ::-webkit-scrollbar-thumb:hover {
+                background: linear-gradient(135deg, #2a5298, #7e8ba3);
+            }
+            
+            /* Mobile Responsive */
+            @media (max-width: 768px) {
+                section {
+                    padding: 30px !important;
+                    border-radius: 20px;
+                }
+                
+                .title {
+                    font-size: 2.5rem;
+                }
+                
+                body {
+                    background-size: 300% 300%;
+                }
+            }
+            
+            /* Loader Enhancement */
+            #spinner {
+                background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            }
+            
+            .spinner-border {
+                width: 5rem !important;
+                height: 5rem !important;
+                border: 6px solid rgba(255, 255, 255, 0.3);
+                border-top-color: white;
+            }
+            
+            /* Dashboard Section Styling */
+            .container .row.align-items-center {
+                background: rgba(255, 255, 255, 0.7);
+                backdrop-filter: blur(10px);
+                border-radius: 20px;
+                padding: 30px;
+                margin-bottom: 30px;
+                transition: all 0.4s ease;
+                border: 1px solid rgba(255, 255, 255, 0.5);
+            }
+            
+            .container .row.align-items-center:hover {
+                background: rgba(255, 255, 255, 0.95);
+                box-shadow: 0 15px 40px rgba(30, 60, 114, 0.15);
+                transform: translateY(-5px);
+            }
+            
+            /* Dashboard Images */
+            .container .row.align-items-center img {
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(30, 60, 114, 0.2);
+                transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                border: 3px solid rgba(42, 82, 152, 0.2);
+            }
+            
+            .container .row.align-items-center img:hover {
+                transform: scale(1.05);
+                box-shadow: 0 20px 50px rgba(30, 60, 114, 0.4);
+                border-color: #2a5298;
+            }
+            
+            /* Dashboard Headings */
+            .container .row.align-items-center h3 {
+                background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                font-weight: 700;
+                font-size: 1.8rem;
+            }
+            
+            /* Dashboard Links */
+            .container .row.align-items-center a.text-info {
+                color: #2a5298 !important;
+                font-weight: 600;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                border-bottom: 2px solid transparent;
+            }
+            
+            .container .row.align-items-center a.text-info:hover {
+                color: #1e3c72 !important;
+                border-bottom-color: #2a5298;
+                transform: translateX(5px);
+            }
+            
+            /* Dashboard Text */
+            .container .row.align-items-center p {
+                color: #34495e;
+                line-height: 1.8;
+            }
+            
+            .container .row.align-items-center strong {
+                color: #1e3c72;
+                font-weight: 700;
+            }
+            
+            /* Dashboard Container Background */
+            .container {
+                background: transparent;
+                padding: 20px;
+            }
+            
+            /* Nested Container in Dashboard Section */
+            section .container {
+                padding: 0 !important;
+                background: transparent !important;
+            }
+            
+            section .container .row.align-items-center {
+                background: rgba(255, 255, 255, 0.75);
+                backdrop-filter: blur(12px);
+                border-radius: 25px;
+                padding: 40px !important;
+                margin-bottom: 30px;
+                transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+                border: 2px solid rgba(255, 255, 255, 0.6);
+                box-shadow: 0 10px 30px rgba(30, 60, 114, 0.1);
+            }
+            
+            section .container .row.align-items-center:hover {
+                background: rgba(255, 255, 255, 0.95);
+                box-shadow: 0 20px 50px rgba(30, 60, 114, 0.2);
+                transform: translateY(-8px);
+                border-color: rgba(42, 82, 152, 0.3);
+            }
+            
+            /* Dashboard Image Enhancement */
+            section .container img {
+                transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+            }
+            
+            section .container img:hover {
+                transform: scale(1.08) !important;
+                box-shadow: 0 25px 60px rgba(30, 60, 114, 0.5) !important;
+            }
+            
+            /* Tool Images Styling */
+            .service-item img {
+                transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+                filter: drop-shadow(0 5px 15px rgba(30, 60, 114, 0.2));
+                margin: 0 auto 20px !important;
+                display: block !important;
+            }
+            
+            .service-item:hover img {
+                transform: scale(1.15) rotate(5deg);
+                filter: drop-shadow(0 10px 25px rgba(30, 60, 114, 0.4));
+            }
+            
+            /* Service Item Centering */
+            .service-item {
+                text-align: center !important;
+            }
+            
+            .service-item h5 {
+                text-align: center !important;
+            }
+            
+            /* Image Split Animation */
+            .profile-image-container {
+                position: relative;
+                overflow: visible;
+                cursor: pointer;
+            }
+            
+            .image-piece {
+                position: absolute;
+                pointer-events: none;
+                transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+            }
+            
+            .image-exploding {
+                animation: explode 1s ease-out forwards;
+            }
+            
+            @keyframes explode {
+                from {
+                    transform: scale(1) rotate(0deg);
+                    opacity: 1;
+                }
+                to {
+                    transform: scale(1.5) rotate(720deg);
+                    opacity: 0;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+       
+
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4 sticky-lg-top vh-100">
+                    <div class="d-flex flex-column h-100 text-center overflow-auto shadow" style="padding: 25px;">
+                        <div style="margin: 20px 0;" class="profile-image-container" id="profileImageContainer">
+                            <img class="w-100 img-fluid" id="profileImage" src="img/per.png" alt="Image" style="max-width: 200px; border: 4px solid #2a5298; box-shadow: 0 15px 50px rgba(30, 60, 114, 0.5); position: relative; z-index: 1;">
+                        </div>
+                        <h1 class="text-primary mt-2" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-weight: 700; font-size: 2rem;">Toni Vasanth</h1>
+                        <div class="mb-4" style="height: 22px;">
+                            <h4 class="typed-text-output d-inline-block text-light"></h4>
+                            <div class="typed-text d-none">Data Scientist, AI Engineer, Data Analyst, Front End Developer, Apps Designer</div>
+                        </div>
+                        <div class="d-flex justify-content-center mt-auto mb-3">
+                            <a class="btn btn-secondary btn-square mx-1" href="https://github.com/Tonivasanth">
+                            <img src="img/git.png" alt="Naukri" style="width:18px; height:18px;">
+                            </a>
+                            <a class="btn btn-dark btn-square mx-1" href="https://www.naukri.com/mnjuser/profile?id=&altresid">
+                                <img src="img/naukri.png" alt="Naukri" style="width:18px; height:18px;">
+                            </a>
+                            <a class="btn btn-secondary btn-square mx-1" href="https://www.linkedin.com/in/toni-vasanth-tj21/"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-secondary btn-square mx-1" href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                        <div class="d-flex align-items-end justify-content-between border-top mt-4" style="gap: 10px; padding-top: 20px;">
+                            <a href="img/Resume.pdf" class="btn w-50" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; font-weight: 600; text-decoration: none; border: none;">Download CV</a>
+                            <a href=".vscode/contact.html" class="btn w-50" style="background: linear-gradient(135deg, #2a5298 0%, #7e8ba3 100%); color: white; font-weight: 600; text-decoration: none; border: none;">Contact Me</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    
+                    <section class="wow fadeInUp" data-wow-delay="0.1s">
+                        <h1 class="title pb-3 mb-5">About Me</h1>
+                        <p>I am a passionate Data Scientist and AI Engineer with a strong foundation in science and computing, currently pursuing an MCA at Arul Anandar College, Madurai. With a B.Sc. in Physics from Bharathidasan University, I bring analytical rigor and technical expertise in Python, SQL, Power BI, Tableau, Excel, Machine Learning, and AI.
+                           I have completed multiple data-driven and AI-powered projects that showcase my ability to derive actionable insights from complex datasets and build intelligent systems. These include AI-powered Sales Forecasting with machine learning models achieving 85% accuracy, NLP Sentiment Analysis achieving 92% classification accuracy, Computer Vision for image recognition, and AI-driven Recommendation Systems. Additionally, I have worked on Olympics Data Analysis with predictive models, Supermart Sales Analytics with interactive dashboards using Power BI and Excel, and developed a Blog Website applying full-stack web development skills.
+                           My strengths lie in data cleaning, exploratory data analysis (EDA), data visualization, machine learning model development, and translating data into actionable business insights. I am passionate about solving real-world problems through AI and continuously expanding my expertise in analytics, business intelligence, artificial intelligence, and web technologies.</p>
+                         <div class="row mb-4" style="color:#2e2e2e;">
+        <div class="col-sm-6 py-1">
+            <span class="fw-medium text-primary" style="color:#00b3ff;">Name:</span> Toni Vasanth
+        </div>
+        <div class="col-sm-6 py-1">
+            <span class="fw-medium text-primary" style="color:#00b3ff;">Birthday:</span> 21 January 2004
+        </div>
+        <div class="col-sm-6 py-1">
+            <span class="fw-medium text-primary" style="color:#00b3ff;">Degree:</span> Master of Computer Application (MCA)
+        </div>
+        <div class="col-sm-6 py-1">
+            <span class="fw-medium text-primary" style="color:#00b3ff;">Experience:</span> 3 Months intern
+        </div>
+        <div class="col-sm-6 py-1">
+            <span class="fw-medium text-primary" style="color:#00b3ff;">Phone:</span> +91 7397644908
+        </div>
+        <div class="col-sm-6 py-1">
+            <span class="fw-medium text-primary" style="color:#00b3ff;">Email:</span> vasanthtoni@gmail.com
+        </div>
+        <div class="col-sm-6 py-1">
+            <span class="fw-medium text-primary" style="color:#00b3ff;">Address:</span> Theni(dt) - 625 530 ,Tamilnadu
+        </div>
+        <div class="col-sm-6 py-1">
+            <span class="fw-medium text-primary" style="color:#00b3ff;">CGPA (Grade):</span> 8.75
+        </div>
+    </div>
+</section>
+                        <div class="row g-4">
+                            <div class="col-md-4 col-lg-6 col-xl-4">
+                                <div class="d-flex bg-secondary p-4">
+                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">6</h1>
+                                    <div class="ps-3">
+                                        <p class="mb-0">Projects </p>
+                                        <h5 class="mb-0"> in Data analysis</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-lg-6 col-xl-4">
+                                <div class="d-flex bg-secondary p-4">
+                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">3</h1>
+                                    <div class="ps-3">
+                                        <p class="mb-0">Web </p>
+                                        <h5 class="mb-0">Development Projects</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-lg-6 col-xl-4">
+                                <div class="d-flex bg-secondary p-4">
+                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">12</h1>
+                                    <div class="ps-3">
+                                        <p class="mb-0">Complete</p>
+                                        <h5 class="mb-0">Projects</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section class="wow fadeInUp" data-wow-delay="0.1s">
+                        <h1 class="title pb-3 mb-5">Skills</h1>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="skill mb-4">
+                                    <div class="d-flex justify-content-between">
+                                        <p class="mb-2">Python</p>
+                                        <p class="mb-2">85%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="skill mb-4">
+                                    <div class="d-flex justify-content-between">
+                                        <p class="mb-2">SQL</p>
+                                        <p class="mb-2">80%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="skill mb-4">
+                                    <div class="d-flex justify-content-between">
+                                        <p class="mb-2">Excel</p>
+                                        <p class="mb-2">85%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="skill mb-4">
+                                    <div class="d-flex justify-content-between">
+                                        <p class="mb-2">Power-Bi</p>
+                                        <p class="mb-2">95%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="skill mb-4">
+                                    <div class="d-flex justify-content-between">
+                                        <p class="mb-2">Tableau</p>
+                                        <p class="mb-2">85%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-success" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="skill mb-4">
+                                    <div class="d-flex justify-content-between">
+                                        <p class="mb-2">MongoDB</p>
+                                        <p class="mb-2">80%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-info" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section class="wow fadeInUp" data-wow-delay="0.1s">
+                        <h1 class="title pb-3 mb-5">Experience</h1>
+                        <div class="border-start border-2 border-light pt-2 ps-5">
+                            <div class="position-relative mb-4">
+                                <span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px; left: -50px;"></span>
+                                <h5 class="mb-1">Data Analyst Intern</h5>
+                                <p class="mb-2"><b>NoviTech R&D Pvt Ltd </b><small><b>Feb-2025 to Mar-2025</b></small></p>
+                                <p>During my internship at Novitech, I gained hands-on experience in data analytics, working on real-world projects to collect, clean, analyze, and visualize data. I learned to use tools like Excel, SQL, Power BI, and Python for data analysis and reporting. My responsibilities included interpreting complex datasets, identifying key insights, preparing dashboards, and assisting in data-driven decision-making processes. The internship strengthened my analytical thinking, problem-solving abilities, and technical skills, preparing me for professional roles in the data analytics field.</p>
+                            </div>
+                            <div class="position-relative mb-4">
+                                <span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px; left: -50px;"></span>
+                                <h5 class="mb-1">Data Analyst Intern</h5>
+                                <p class="mb-2"><b>Unified Mentor</b> <small><b>May-2025 to June-2025</b></small></p>
+                                <p>I successfully completed a one-month Data Analytics internship at Unified Mentor, where I gained practical experience in handling and analyzing data. During the internship, I worked on real-world datasets, performing tasks such as data collection, cleaning, and preprocessing using tools like Excel, SQL, and Python. I conducted exploratory data analysis (EDA) to uncover meaningful insights and patterns, and created data visualizations using tools such as Power BI and Matplotlib to present findings in a clear and effective manner. The internship also enhanced my understanding of key data analytics concepts including statistical analysis, trend identification, and data-driven decision-making. This experience strengthened my technical skills and gave me valuable exposure to working in a collaborative, results-oriented environment.</p>
+                            </div>
+                            
+                        </div>
+                    </section>
+                    
+                    <section class="wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="bg-secondary text-center p-5">
+                            <h1 class="text-white font-weight-bold">Connect with Me</h1>
+                            
+                            <div class="position-relative w-100">
+                              <center>
+                                <h4><a href="https://www.linkedin.com/in/toni-vasanth-tj21/">Follow</a></h4>
+                                
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section class="wow fadeInUp" data-wow-delay="0.1s">
+                        <h1 class="title pb-3 mb-5">Tools</h1>
+                        <div class="row g-4" style="text-align: center;">
+                            <div class="col-md-6">
+                                <div class="service-item">
+                                    <img src="https://powerbi.microsoft.com/pictures/application-logos/svg/powerbi.svg" alt="Power BI" style="width: 80px; height: 80px; margin: 0 auto 20px; display: block;" onerror="this.onerror=null; this.src='https://img.icons8.com/color/80/000000/power-bi.png';">
+                                    <h5 class="mb-2">Power BI</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="service-item">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/tableau-software.svg" alt="Tableau" style="width: 80px; height: 80px; margin: 0 auto 20px; display: block;" onerror="this.onerror=null; this.src='https://img.icons8.com/color/80/000000/tableau-software.png';">
+                                    <h5 class="mb-2">Tableau</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="service-item">
+                                    <img src="https://img.icons8.com/color/80/000000/microsoft-excel-2019.png" alt="Excel" style="width: 80px; height: 80px; margin: 0 auto 20px; display: block;">
+                                    <h5 class="mb-2">Excel</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="service-item">
+                                    <img src="https://img.icons8.com/color/80/000000/google-analytics.png" alt="Google Data Studio" style="width: 80px; height: 80px; margin: 0 auto 20px; display: block;">
+                                    <h5 class="mb-2">Google Data Studio</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="service-item">
+                                    <img src="https://img.icons8.com/color/80/000000/python.png" alt="Python" style="width: 80px; height: 80px; margin: 0 auto 20px; display: block;">
+                                    <h5 class="mb-2">Python</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="service-item">
+                                    <img src="https://img.icons8.com/color/80/000000/mysql-logo.png" alt="SQL" style="width: 80px; height: 80px; margin: 0 auto 20px; display: block;">
+                                    <h5 class="mb-2">SQL</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="service-item">
+                                    <img src="https://img.icons8.com/color/80/000000/mongodb.png" alt="MongoDB" style="width: 80px; height: 80px; margin: 0 auto 20px; display: block;">
+                                    <h5 class="mb-2">MongoDB</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="service-item">
+                                    <div style="width: 80px; height: 80px; margin: 0 auto 20px; background: linear-gradient(135deg, #276DC3 0%, #1968B8 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 20px rgba(39, 109, 195, 0.4);">
+                                        <span style="color: white; font-size: 48px; font-weight: bold; font-family: 'Courier New', monospace;">R</span>
+                                    </div>
+                                    <h5 class="mb-2">R Language</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="service-item">
+                                    <div style="width: 80px; height: 80px; margin: 0 auto 20px; background: linear-gradient(135deg, #F37626 0%, #EC6A1E 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 20px rgba(243, 118, 38, 0.4);">
+                                        <span style="color: white; font-size: 36px; font-weight: bold;">J</span>
+                                    </div>
+                                    <h5 class="mb-2">Jupyter</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="service-item">
+                                    <img src="https://img.icons8.com/color/80/000000/python.png" alt="Pandas" style="width: 80px; height: 80px; margin: 0 auto 20px; display: block; opacity: 0.9;">
+                                    <h5 class="mb-2">Pandas</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="service-item">
+                                    <img src="https://img.icons8.com/color/80/000000/python.png" alt="NumPy" style="width: 80px; height: 80px; margin: 0 auto 20px; display: block; opacity: 0.85;">
+                                    <h5 class="mb-2">NumPy</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="service-item">
+                                    <img src="https://img.icons8.com/color/80/000000/python.png" alt="Matplotlib" style="width: 80px; height: 80px; margin: 0 auto 20px; display: block; opacity: 0.75;">
+                                    <h5 class="mb-2">Matplotlib</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="service-item">
+                                    <img src="https://img.icons8.com/color/80/000000/statistics.png" alt="Seaborn" style="width: 80px; height: 80px; margin: 0 auto 20px; display: block;">
+                                    <h5 class="mb-2">Seaborn</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="service-item">
+                                    <img src="https://img.icons8.com/color/80/000000/tensorflow.png" alt="TensorFlow" style="width: 80px; height: 80px; margin: 0 auto 20px; display: block;">
+                                    <h5 class="mb-2">TensorFlow</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="service-item">
+                                    <div style="width: 80px; height: 80px; margin: 0 auto 20px; background: linear-gradient(135deg, #F7931E 0%, #FF6F00 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 20px rgba(247, 147, 30, 0.4);">
+                                        <span style="color: white; font-size: 20px; font-weight: bold;">Sklearn</span>
+                                    </div>
+                                    <h5 class="mb-2">Scikit-learn</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section class="wow fadeInUp" data-wow-delay="0.1s">
+                        <h1 class="title pb-3 mb-5">Dashboard</h1>
+
+    
+
+  <div class="container">
+   
+    <div class="row align-items-center mb-5">
+      
+      <div class="col-md-6 text-center">
+        <img id="powerbiImage"
+             src="img/patient.png"
+             alt="Power BI Dashboard"
+             class="img-fluid w-100 rounded shadow"
+             style="cursor:pointer; transition:transform 0.3s ease;">
+      </div>
+      
+
+      
+      <div class="col-md-6">
+        <h3 class="text-primary mb-3">Hospital Emergency Room Dashboard (Power BI)</h3>
+        <p>
+          This Power BI dashboard highlights a moderate patient load in June with an average wait time exceeding
+          30 minutes. The patient satisfaction score slightly surpasses the norm, while 201 readmissions were noted.
+          Insights help uncover patterns and performance improvement areas.
+        </p>
+        <p><strong>Tools Used:</strong> Power BI, DAX, SQL, Excel</p>
+        <p>
+          <strong>View Live Dashboard:</strong>
+          <a href="https://app.powerbi.com/groups/me/reports/6a4ca026-d83b-41cd-96a5-50ebfbb28abd/e10f991bff8fe1f4ee63?experience=power-bi"
+             target="_blank"
+             id="dashboardLink"
+             class="text-info">Click here</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  
+  const powerbiImage = document.getElementById("powerbiImage");
+
+  
+  const visuals = [
+    "img/patient.png",
+    "img/bar.jpeg",
+    "img/portfolio-1.jpg",
+    "img/portfolio-2.jpg"
+  ];
+
+  let currentVisual = 0;
+
+  powerbiImage.addEventListener("click", () => {
+    
+    currentVisual = (currentVisual + 1) % visuals.length;
+    powerbiImage.style.transform = "scale(0.95)";
+    setTimeout(() => {
+      powerbiImage.src = visuals[currentVisual];
+      powerbiImage.style.transform = "scale(1)";
+    }, 150);
+  });
+
+  
+  powerbiImage.addEventListener("dblclick", () => {
+    window.open(
+      "https://app.powerbi.com/groups/me/reports/6a4ca026-d83b-41cd-96a5-50ebfbb28abd/e10f991bff8fe1f4ee63?experience=power-bi",
+      "_blank"
+    );
+  });
+</script>
+
+                                    
+
+         <div class="container">
+  
+  <div class="row align-items-center mb-5">
+    
+    <div class="col-md-6 text-center">
+      <img id="tableauImage"
+           src="img/tab.png"
+           alt="HR Analytics Dashboard (Tableau)"
+           class="img-fluid w-100 rounded shadow"
+           style="cursor:pointer; transition:transform 0.3s ease;">
+    </div>
+
+    
+    <div class="col-md-6">
+      <h3 class="text-primary mb-3">HR Analytics Dashboard (Tableau)</h3>
+      <p>
+        The dataset focuses on employee attrition analysis to identify factors influencing turnover and retention,
+        along with demographic and departmental insights to understand workforce diversity.
+        It also explores job satisfaction, performance trends, compensation, and promotion patterns to assess engagement and career growth.
+        Additionally, it includes work-life balance indicators and predictive insights to support data-driven HR decision-making.
+      </p>
+      <p><strong>Tools Used:</strong> Tableau, SQL, Excel</p>
+      <p>
+        <strong>View Live Dashboard:</strong>
+        <a href="https://public.tableau.com/app/profile/toni.j6910/viz/HRDashboard21/Dashboard1?publish=yes"
+           target="_blank"
+           id="dashboardLink"
+           class="text-info">Click here</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  
+  const tableauImage = document.getElementById("tableauImage");
+
+  
+  const tableauVisuals = [
+    "img/hand.webp",          
+    "img/tab.png",     
+    "img/port.webp",     
+    "img/world.jpeg"     
+  ];
+
+  let tableauCurrent = 0;
+
+  tableauImage.addEventListener("click", () => {
+    
+    tableauCurrent = (tableauCurrent + 1) % tableauVisuals.length;
+    tableauImage.style.transform = "scale(0.95)";
+    setTimeout(() => {
+      tableauImage.src = tableauVisuals[tableauCurrent];
+      tableauImage.style.transform = "scale(1)";
+    }, 150);
+  });
+
+  
+  tableauImage.addEventListener("dblclick", () => {
+    window.open(
+      "https://public.tableau.com/app/profile/toni.j6910/viz/HRDashboard21/Dashboard1?publish=yes",
+      "_blank"
+    );
+  });
+</script>
+ <div class="container">
+  <div class="row align-items-center mb-5">
+    <!-- Power BI Image Section -->
+    <div class="col-md-6 text-center">
+      <img id="shopifyImage"
+           src="img/shopify.png"
+           alt="Shopify Power BI Dashboard"
+           class="img-fluid w-100 rounded shadow"
+           style="cursor:pointer; transition:transform 0.3s ease;">
+    </div>
+
+    <!-- Description Section -->
+    <div class="col-md-6">
+      <h3 class="text-primary mb-3">Shopify Sales and Customer Funnel Report (Power BI)</h3>
+      <p>
+        I developed a dynamic Power BI dashboard titled “Shopify Sales and Customer Funnel Report” to analyze sales performance and customer behavior. 
+        It showcases $41.8M in net sales from 7,534 orders, with insights into repeat purchase rate (46%), customer lifetime value ($943.6), 
+        and product trends. The report visualizes sales by time, product type, payment method, and region, highlighting running shoes and Shopify Payments as top performers. 
+        Interactive slicers for sales, gateway, and province enable data-driven decision-making and reflect my expertise in Power BI and business analytics.
+      </p>
+      <p><strong>Tools Used:</strong> Power BI, DAX, SQL, Excel</p>
+      <p>
+        <strong>View Live Dashboard:</strong>
+        <a href="https://app.powerbi.com/groups/me/reports/5012faf3-8e5a-4195-a1ab-8c6b74865cb5/f300137abb4e0c385794?experience=power-bi"
+           target="_blank"
+           id="dashboardLink"
+           class="text-info">Click here</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ✅ JavaScript for Image Splitter -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const shopifyImage = document.getElementById("shopifyImage");
+
+    // Add multiple visuals for rotation
+    const visuals = [
+      "img/shop.jpg",
+      "img/sho.png",
+      "img/shopify.png",
+      "img/shopping.jpg"
+    ];
+
+    let currentVisual = 0;
+
+    // On click → change image
+    shopifyImage.addEventListener("click", () => {
+      currentVisual = (currentVisual + 1) % visuals.length;
+      shopifyImage.style.transform = "scale(0.95)";
+      setTimeout(() => {
+        shopifyImage.src = visuals[currentVisual];
+        shopifyImage.style.transform = "scale(1)";
+      }, 150);
+    });
+
+    // On double-click → open dashboard link
+    shopifyImage.addEventListener("dblclick", () => {
+      window.open(
+        "https://app.powerbi.com/groups/me/reports/5012faf3-8e5a-4195-a1ab-8c6b74865cb5/f300137abb4e0c385794?experience=power-bi",
+        "_blank"
+      );
+    });
+  });
+</script>
+<div class="container">
+  <div class="row align-items-center mb-5">
+    <!-- Power BI Image Section -->
+    <div class="col-md-6 text-center">
+      <img id="shopifyImage"
+           src="img/competitive.png"
+           alt="Shopify Power BI Dashboard"
+           class="img-fluid w-100 rounded shadow"
+           style="cursor:pointer; transition:transform 0.3s ease;">
+    </div>
+
+    <!-- Description Section -->
+    <div class="col-md-6">
+      <h3 class="text-primary mb-3">Shopify Sales and Customer Funnel Report (Power BI)</h3>
+      <p>
+       The Competitive Market Analyzing Report provides key insights into market trends, competitor performance, 
+       and customer behavior. It highlights sales distribution, pricing strategies, 
+       and brand positioning to evaluate market strength. This analysis supports data-driven decision-making for 
+       improving competitiveness and business growth.
+      </p>
+      <p><strong>Tools Used:</strong> Power BI, DAX, SQL, Excel</p>
+      <p>
+        <strong>View Live Dashboard:</strong>
+        <a href="https://app.powerbi.com/groups/me/reports/b373336d-df1d-4fb4-bb18-c0b73aae08d4/ReportSectione0912ffb2ba909ea50d0?experience=power-bi"
+           target="_blank"
+           id="dashboardLink"
+           class="text-info">Click here</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ✅ JavaScript for Image Splitter -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const shopifyImage = document.getElementById("shopifyImage");
+
+    // Add multiple visuals for rotation
+    const visuals = [
+      "img/shop.jpg",
+      "img/sho.png",
+      "img/shopify.png",
+      "img/shopping.jpg"
+    ];
+
+    let currentVisual = 0;
+
+    // On click → change image
+    shopifyImage.addEventListener("click", () => {
+      currentVisual = (currentVisual + 1) % visuals.length;
+      shopifyImage.style.transform = "scale(0.95)";
+      setTimeout(() => {
+        shopifyImage.src = visuals[currentVisual];
+        shopifyImage.style.transform = "scale(1)";
+      }, 150);
+    });
+
+    // On double-click → open dashboard link
+    shopifyImage.addEventListener("dblclick", () => {
+      window.open(
+        "https://app.powerbi.com/groups/me/reports/5012faf3-8e5a-4195-a1ab-8c6b74865cb5/f300137abb4e0c385794?experience=power-bi",
+        "_blank"
+      );
+    });
+  });
+</script>                   
+                  
+                    <section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
+                        <h1 class="title pb-3 mb-5">Courses & Certificates</h1>
+                        <div class="owl-carousel testimonial-carousel">
+                            <div class="text-left">
+                                <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                                <p class="fs-4 mb-4">Gained foundational knowledge in data analytics, including data collection, cleaning, 
+                                    visualization, and interpretation using tools like Excel and SQL.
+                                    Learned to apply analytical thinking to real-world business problems and generate actionable insights.</p>
+                                <div class="d-flex align-items-center">
+                                    <img class="img-fluid" src="img/cour.png" style="width: 60px; height: 60px;">
+                                    <div class="ps-3">
+                                        <p class="text-primary fs-5 mb-1">Data Analytics Essentials</p>
+                                        <i style="color:#5702f5;"><b>Coursera</b></i><br>
+                                        <i><a href="https://www.credly.com/badges/55bdbf1c-8756-4666-b503-2259ff7b254d/linked_in_profile"> Link </a></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-left">
+                                <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                                <p class="fs-4 mb-4">Participated in a Power BI workshop organized by TechTip24, where I gained hands-on experience in
+                                     creating dynamic dashboards and visual reports. 
+                                    The session enhanced my understanding of data modeling, DAX functions, and business intelligence reporting.</p>
+                                <div class="d-flex align-items-center">
+                                    <img class="img-fluid" src="img/tech.png" style="width: 60px; height: 60px;">
+                                    <div class="ps-3">
+                                        <p class="text-primary fs-5 mb-1">Data analytics using Power BI </p>
+                                        <i style="color: #5702f5;"><b>TechTip24</b></i><br>
+                                        <i><a href="img/techtip.pdf">Link</a></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-left">
+                                <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                                <p class="fs-4 mb-4">Gained foundational knowledge in data analytics, including data collection, cleaning, 
+                                    visualization, and interpretation using tools like Excel and SQL.
+                                    Learned to apply analytical thinking to real-world business problems and generate actionable insights.</p>
+                                <div class="d-flex align-items-center">
+                                    <img class="img-fluid" src="img/simpli.webp" style="width: 60px; height: 60px;">
+                                    <div class="ps-3">
+                                        <p class="text-primary fs-5 mb-1">Data analytics </p>
+                                        <i style="color: #5702f5;"><b>Simplilearn</b></i><br>
+                                        <i><a href="img/sim.pdf">Link</a></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-left">
+                                <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                                <p class="fs-4 mb-4">Participated in a Power BI workshop organized by the United Latino Students Association, 
+                                    where I learned to build interactive dashboards and perform business data analysis using real-world datasets. 
+                                    The workshop strengthened my skills in data visualization and business intelligence.</p>
+                                <div class="d-flex align-items-center">
+                                    <img class="img-fluid" src="img/united.png" style="width: 60px; height: 60px;">
+                                    <div class="ps-3">
+                                        <p class="text-primary fs-5 mb-1">Power Bi Workshop </p>
+                                        <i style="color: #5702f5;"><b>United Latino Students Association</b></i><br>
+                                        <i><a href="img/office.pdf">Link</a></i>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="text-left">
+                                <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                                <p class="fs-4 mb-4">At Novitech, I completed an in-depth training program in Data Analytics,
+                                     where I learned the complete workflow — from data cleaning and transformation to visualization and predictive insights. 
+                                     This experience enhanced my technical and analytical problem-solving skills.</p>
+                                <div class="d-flex align-items-center">
+                                    <img class="img-fluid" src="img/novi.jpeg" style="width: 60px; height: 60px;">
+                                    <div class="ps-3">
+                                        <p class="text-primary fs-5 mb-1">Data Analyst Intern </p>
+                                        <i style="color: #5702f5;"><b>NoviTech R&D Pvt Ltd</b></i><br>
+                                        <i><a href="img/techno.pdf">Link</a></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-left">
+                                <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                                <p class="fs-4 mb-4">During my internship at Unified Mentor, I worked on two real-time data analytics projects:
+
+                                        Olympics Dataset Analysis – explored athlete performance, medal trends, and country-wise statistics.
+
+                                        Supermarket Sales Analysis – analyzed customer behavior, sales trends, and revenue patterns using data visualization techniques.</p>
+                                <div class="d-flex align-items-center">
+                                    <img class="img-fluid" src="img/uni.jpg" style="width: 60px; height: 60px;">
+                                    <div class="ps-3">
+                                        <p class="text-primary fs-5 mb-1">Data Analyst Intern </p>
+                                        <i style="color: #5702f5;"><b>Unified Mentor</b></i><br>
+                                        <i><a href="img/mentor.pdf">Link</a></i><br>
+                                        <i><a href="https://colab.research.google.com/drive/1OeYi47mnbukiOggk8nJXUWHg-68sbtcq?usp=drive_link">Proj-1</a></i><br>
+                                        <i><a href="https://colab.research.google.com/drive/1OnPtCL8KoNC0sB1OWAVBJic-KSMiPJj0?usp=sharing">Proj-2</a></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Testimonial End -->
+
+                    <!-- Contact Start -->
+                    
+
+                    <!-- Footer Start -->
+                    <section class="wow fadeIn" data-wow-delay="0.1s">
+                        <div class="bg-secondary text-light text-center p-5">
+                            <div class="d-flex justify-content-center mt-auto mb-3">
+                            <a class="btn btn-secondary btn-square mx-1" href="https://github.com/Tonivasanth">
+                            <img src="img/git.png" alt="Naukri" style="width:18px; height:18px;">
+                            </a>
+                            <a class="btn btn-dark btn-square mx-1" href="https://www.naukri.com/mnjuser/profile?id=&altresid">
+                                <img src="img/naukri.png" alt="Naukri" style="width:18px; height:18px;">
+                            </a>
+                            <a class="btn btn-secondary btn-square mx-1" href="https://www.linkedin.com/in/toni-vasanth-tj21/"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-secondary btn-square mx-1" href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                        <div class="d-flex align-items-end justify-content-between border-top">
+                            <a href="img/Resume.pdf" class="btn w-50 border-end">Download CV</a>
+                            <a href=".vscode/contact.html" class="btn w-50 btn-scroll">Contact Me</a>
+                        </div>
+                            
+							
+                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+							<p class="m-0">&copy; All Rights Reserved</p>
+                        </div>
+                    </section>
+                    <!-- Footer End -->
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- Back to Top -->
+        <a href="#" class="back-to-top"><i class="fa fa-angle-double-up"></i></a>
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/typed/typed.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+        <!-- Contact Javascript File -->
+        <script src="mail/jqBootstrapValidation.min.js"></script>
+        <script src="mail/contact.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+        
+        <!-- Image Split Effect Script -->
+        <script>
+            let isExploding = false;
+            
+            document.getElementById('profileImage').addEventListener('click', function() {
+                if (isExploding) return;
+                isExploding = true;
+                
+                const img = this;
+                const container = document.getElementById('profileImageContainer');
+                const rect = img.getBoundingClientRect();
+                const containerRect = container.getBoundingClientRect();
+                
+                // Create pieces (8x8 grid = 64 pieces)
+                const pieces = 64;
+                const cols = 8;
+                const rows = 8;
+                const pieceWidth = rect.width / cols;
+                const pieceHeight = rect.height / rows;
+                
+                // Hide original image temporarily
+                img.style.opacity = '0';
+                
+                const imagePieces = [];
+                
+                // Create pieces
+                for (let i = 0; i < pieces; i++) {
+                    const row = Math.floor(i / cols);
+                    const col = i % cols;
+                    
+                    const piece = document.createElement('div');
+                    piece.className = 'image-piece';
+                    piece.style.width = pieceWidth + 'px';
+                    piece.style.height = pieceHeight + 'px';
+                    piece.style.backgroundImage = `url(${img.src})`;
+                    piece.style.backgroundSize = `${rect.width}px ${rect.height}px`;
+                    piece.style.backgroundPosition = `-${col * pieceWidth}px -${row * pieceHeight}px`;
+                    piece.style.left = (rect.left - containerRect.left) + (col * pieceWidth) + 'px';
+                    piece.style.top = (rect.top - containerRect.top) + (row * pieceHeight) + 'px';
+                    
+                    container.appendChild(piece);
+                    
+                    // Store original position and scramble target position
+                    const originalRow = row;
+                    const originalCol = col;
+                    const targetRow = Math.floor(Math.random() * rows);
+                    const targetCol = Math.floor(Math.random() * cols);
+                    
+                    imagePieces.push({
+                        element: piece,
+                        originalRow: originalRow,
+                        originalCol: originalCol,
+                        targetRow: targetRow,
+                        targetCol: targetCol
+                    });
+                    
+                    // Phase 1: Explosion (first 1 second)
+                    setTimeout(() => {
+                        const angle = Math.random() * 2 * Math.PI;
+                        const distance = 150 + Math.random() * 200;
+                        const rotation = Math.random() * 1080 - 540;
+                        
+                        piece.style.transition = 'all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
+                        piece.style.transform = `translate(${Math.cos(angle) * distance}px, ${Math.sin(angle) * distance}px) rotate(${rotation}deg) scale(${0.3 + Math.random() * 0.5})`;
+                        piece.style.opacity = '0.7';
+                    }, 50);
+                }
+                
+                // Phase 2: Rearrangement (after 1.5 seconds, over 2.5 seconds)
+                setTimeout(() => {
+                    imagePieces.forEach((item, index) => {
+                        setTimeout(() => {
+                            const finalX = (rect.left - containerRect.left) + (item.targetCol * pieceWidth) + (Math.random() * 100 - 50);
+                            const finalY = (rect.top - containerRect.top) + (item.targetRow * pieceHeight) + (Math.random() * 100 - 50);
+                            const finalRotation = Math.random() * 720 - 360;
+                            
+                            item.element.style.transition = 'all 2s cubic-bezier(0.17, 0.67, 0.12, 0.99)';
+                            item.element.style.left = finalX + 'px';
+                            item.element.style.top = finalY + 'px';
+                            item.element.style.transform = `rotate(${finalRotation}deg) scale(${0.7 + Math.random() * 0.4})`;
+                            item.element.style.opacity = '1';
+                        }, index * 15);
+                    });
+                }, 1500);
+                
+                // Phase 3: Restore to original (after 4 seconds)
+                setTimeout(() => {
+                    imagePieces.forEach((item, index) => {
+                        setTimeout(() => {
+                            const originalX = (rect.left - containerRect.left) + (item.originalCol * pieceWidth);
+                            const originalY = (rect.top - containerRect.top) + (item.originalRow * pieceHeight);
+                            
+                            item.element.style.transition = 'all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
+                            item.element.style.left = originalX + 'px';
+                            item.element.style.top = originalY + 'px';
+                            item.element.style.transform = 'rotate(0deg) scale(1)';
+                            item.element.style.opacity = '1';
+                        }, index * 10);
+                    });
+                }, 4000);
+                
+                // Phase 4: Clean up and restore image (after 6 seconds)
+                setTimeout(() => {
+                    img.style.opacity = '1';
+                    img.style.transition = 'opacity 0.5s ease';
+                    document.querySelectorAll('.image-piece').forEach(piece => piece.remove());
+                    isExploding = false;
+                }, 6000);
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,12 @@
+document.addEventListener("DOMContentLoaded", function() {
+  const buttons = document.querySelectorAll('.rq-download-img');
+  if (window.innerWidth <= 768) {
+    buttons.forEach(function(button) {
+      if (button.textContent.trim() === 'Download PNG') {
+        button.textContent = 'All PNG';
+      } else if (button.textContent.trim() === 'VECTOR') {
+        button.textContent = 'SVG';
+      }
+    });
+  }
+});

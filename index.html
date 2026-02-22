@@ -1258,7 +1258,68 @@ This enhanced my skills in data storytelling, dashboard design, analytical think
 })();
 </script>
 
-                                    
+      <div class="container">
+   
+    <div class="row align-items-center mb-5">
+      
+      <div class="col-md-6 text-center">
+        <img id="powerbiImage"
+             src="img/st.png"
+             alt="Power BI Dashboard"
+             class="img-fluid w-100 rounded shadow"
+             style="cursor:pointer; transition:transform 0.3s ease;">
+      </div>
+      
+
+      
+      <div class="col-md-6">
+        <h3 class="text-primary mb-3"> Stranger Things (Power BI)</h3>
+        <p style="text-align: justify;">
+        I created an interactive Power BI dashboard inspired by Stranger Things, analyzing Seasons 1–5 to uncover trends in ratings, episodes, and viewer engagement. The dashboard provides a comprehensive overview of total seasons and episodes, along with an in-depth analysis of average IMDb ratings and season-wise rating trends. It includes a rating versus target comparison, season-wise viewer counts, episode-level rating distribution, and a title-wise IMDb rating breakdown. Multiple datasets such as episode details, ratings, viewership data, and metadata were modeled to ensure meaningful insights. Using Power BI, DAX measures, data modeling techniques, and interactive visuals, I designed a cinematic dark-themed UI aligned with the show’s aesthetic. This project strengthened my skills in data storytelling, KPI structuring, visual hierarchy design, advanced formatting, and dashboard optimization while enhancing my ability to combine analytics with creative design.
+        </p>
+        <p><strong>Tools Used:</strong> Power BI, DAX, SQL, Excel</p>
+        <p>
+          <strong>View Live Dashboard:</strong>
+          <a href="https://app.powerbi.com/links/INZFIojmzY?ctid=29e09b3d-a988-4826-9a1c-d03cb7713305&pbi_source=linkShare&bookmarkGuid=4178b300-c262-4f03-aa4b-158aeee3ceda"
+             target="_blank"
+             id="dashboardLink"
+             class="text-info">Click here</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+    const powerbiImage = document.getElementById("powerbiImage");
+
+    const visuals = [
+        "img/patient.png",
+        "img/bar.jpeg",
+        "img/portfolio-1.jpg",
+        "img/portfolio-2.jpg"
+    ];
+
+    let currentVisual = 0;
+
+    powerbiImage.addEventListener("click", () => {
+        currentVisual = (currentVisual + 1) % visuals.length;
+        powerbiImage.style.transform = "scale(0.95)";
+        setTimeout(() => {
+            powerbiImage.src = visuals[currentVisual];
+            powerbiImage.style.transform = "scale(1)";
+        }, 150);
+    });
+
+    powerbiImage.addEventListener("dblclick", () => {
+        window.open(
+            "https://app.powerbi.com/groups/me/reports/6a4ca026-d83b-41cd-96a5-50ebfbb28abd/e10f991bff8fe1f4ee63?experience=power-bi",
+            "_blank"
+        );
+    });
+})();
+</script>                              
 
          <div class="container">
   

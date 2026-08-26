@@ -52,20 +52,20 @@ body {
 
 /* Name & Title */
 h1 {
-    color: #333;
+    color: #ffffff;
     font-size: 26px;
     margin-bottom: 5px;
 }
 
 .title {
-    color: #777;
+    color: #cbd5e1;
     font-size: 16px;
     margin-bottom: 25px;
 }
 
 /* Info Section */
 .info p {
-    color: #444;
+    color: #e2e8f0;
     font-size: 16px;
     margin: 12px 0;
     transition: color 0.3s;

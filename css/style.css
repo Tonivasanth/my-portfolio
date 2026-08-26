@@ -732,3 +732,83 @@ footer {
     0%, 100% { transform: scale(1); box-shadow: 0 0 18px #00f2fe, 0 0 30px rgba(0, 242, 254, 0.7); }
     50% { transform: scale(1.28); box-shadow: 0 0 25px #00f2fe, 0 0 45px rgba(0, 242, 254, 0.95); }
 }
+
+/* ==========================================================================
+   ULTRA HIGH CONTRAST TYPOGRAPHY & TIMELINE STYLES (Fixes Dark Text)
+   ========================================================================== */
+
+p, li, span, label, td, th {
+    color: #e2e8f0;
+}
+
+.text-secondary,
+p.text-secondary,
+span.text-secondary,
+div.text-secondary,
+small.text-secondary,
+.text-muted,
+p.text-muted,
+span.text-muted {
+    color: #cbd5e1 !important;
+    --bs-text-opacity: 1 !important;
+}
+
+.badge-company-cyan {
+    background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%) !important;
+    color: #040810 !important;
+    font-weight: 800 !important;
+    font-size: 0.85rem !important;
+    padding: 6px 14px !important;
+    border-radius: 20px !important;
+    box-shadow: 0 4px 15px rgba(0, 242, 254, 0.4) !important;
+    display: inline-block !important;
+}
+
+.badge-company-purple {
+    background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%) !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    font-size: 0.85rem !important;
+    padding: 6px 14px !important;
+    border-radius: 20px !important;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4) !important;
+    display: inline-block !important;
+}
+
+.badge-company-indigo {
+    background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%) !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    font-size: 0.85rem !important;
+    padding: 6px 14px !important;
+    border-radius: 20px !important;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4) !important;
+    display: inline-block !important;
+}
+
+.badge-type-pill {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    font-weight: 600 !important;
+    font-size: 0.8rem !important;
+    padding: 5px 12px !important;
+    border-radius: 20px !important;
+    display: inline-block !important;
+}
+
+.timeline-date-text {
+    color: #38bdf8 !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+}
+
+.timeline-date-text i {
+    color: #38bdf8 !important;
+}
+
+.timeline-desc-text {
+    color: #f1f5f9 !important;
+    font-size: 1rem !important;
+    line-height: 1.75 !important;
+}
